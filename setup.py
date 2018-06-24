@@ -1,5 +1,7 @@
 from setuptools import setup
 
+with open("README.rst") as fobj:
+    long_description = fobj.read()
 
 setup(
     author="Eduardo Cuducos",
@@ -15,9 +17,10 @@ setup(
     ),
     description="Memcached HTTP cache storage backend for Scrapy",
     install_requires=("scrapy", "python-memcached"),
+    long_description=long_description,
     name="scrapy-memcached-cache",
     py_modules=["scrapy_memcached_cache"],
     url="https://github.com/cuducos/scrapy-memcached-cache",
-    version="0.0.1",
+    version="0.0.2",
     zip_safe=False,
 )
