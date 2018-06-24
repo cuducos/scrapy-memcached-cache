@@ -21,10 +21,10 @@ Usage
 
 In your Scrapy ``settings.py``:
 
-1. Enable cache ``HTTPCACHE_ENABLED = True``
+1. Enable HTTP cache with ``HTTPCACHE_ENABLED = True``
 2. Set the cache expiration (in seconds), for example, with ``HTTPCACHE_EXPIRATION_SECS = 600``
 3. Set ``MemcachedCacheStorage`` as your cache storage with ``HTTPCACHE_STORAGE = 'scrapy_memcached_cache.MemcachedCacheStorage'``
-4. Set the location where your Memcached is running, for example, eith ``MEMCACHED_LOCATION=localhost:11211``
+4. Set the location where your Memcached is running, for example, with ``MEMCACHED_LOCATION=localhost:11211``
 5. Done 🎉
 
 Contributing
