@@ -1,0 +1,17 @@
+language: python
+python: 3.6
+
+install:
+  - pip install black .
+
+script:
+  - python -c 'from scrapy_memcached_cache import MemcachedCacheStorage'
+  - black . --check
+
+deploy:
+  provider: pypi
+  user: cuducos
+  password:
+    secure: DXS4QuaZiRLHwQh1M+CXMbnBvR2kLz5GWGIqMtcuT9zlmJka8ICw4Q/tEQpcgGH+l3PsJolYIfXcR8wJfsVJxzpvj6waR6a1aaeC1tfUzGBJ765tKwmewAXVARwWF0PljTqA8vnyRqsPAECUvs1HVHvzNDnO0Q9g6xShvtr3a2wZTE7djMncdkduKENjn2vR4/UyeEQ5ZfhDmZP49MqLAR05PfF1Vpk2FS5SJbhn6LiaMC92cDZqdEZdt+ed71TmuBAg0TZYNJTDJDBXzv95UF//89eZauxmE/IJoM7staKMkwrwe+kWXS39/jiicubJu9bYJHO+zqKcDNzGQ8kzNcmUFyppwXeg3qgD6xvh2b3uM6aQAFvBb4VM34OT0SEba7jrMO1QBeUgvRvsQqNCrXoBtIbBC7+F/I0YJkXgKPOwv7N2W3cqZU5738yCs1kzcoPXb35v2p1J0k81mW/4Bo5vVu+i27It3tZTT3qwZvcjl9uS0SmKNUrJMlQs2WZ+XkhEHolO2BfwvWklo9u3WXJ5okolqjTONKzlb5saIBFiujYBx8oSgqerJq+rzMhvhwKlELOGrHpLXtEJ4qGhYRLxgRoy13UVkRGcUB+ztq1JnRLiiRCJP4SNjQ2a9ebY/c1A/cHYD2oLF8VX77vJ2AlfM/1U1rk3qaY7SRPcgIE=
+  on:
+    branch: master
