@@ -21,6 +21,6 @@ setup(
     name="scrapy-memcached-cache",
     py_modules=["scrapy_memcached_cache"],
     url="https://github.com/cuducos/scrapy-memcached-cache",
-    version="0.0.2",
+    version="0.0.3",
     zip_safe=False,
 )
